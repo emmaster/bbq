@@ -6,6 +6,8 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'twitter-bootstrap-rails'
 
+gem 'devise', '3.5.10'
+
 gem 'jquery-rails'
 
 gem 'turbolinks'
