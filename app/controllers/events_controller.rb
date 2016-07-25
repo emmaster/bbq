@@ -44,6 +44,7 @@ class EventsController < ApplicationController
 
   # DELETE /events/1
   def destroy
+
     @event.destroy
     redirect_to events_url, notice: I18n.t('controllers.events.destroyed')
   end
@@ -61,4 +62,13 @@ class EventsController < ApplicationController
     def set_current_user_event
       @event = current_user.events.find(params[:id])
     end
+
+    # def authorize_user
+    #     reject_user unless current_user.events.include?(@event)
+    # end
+    #
+    # def reject_user
+    #   redirect_to root_url, alert: 'Это действие вам недоступно!'
+    # end
+
 end
