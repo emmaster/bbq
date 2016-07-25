@@ -21,6 +21,21 @@ ru:
       destroyed: 'Событие было удалено'
     users:
       updated: 'Данные пользователя отредактированы'
+    comments:
+      destroyed: 'Комментарий удален'
+      created: 'Комментарий создан'
+      error: 'Ошибка — действие не произведено'
+    subscription:
+      destroyed: 'Вы отказались от посещения события'
+      created: 'Вы подписались на событие'
+      error: 'Ошибка — действие не произведено'
   app:
     name: 'Шашлыки'
     company: 'Хороший п'
+
+  comments:
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
+  subscriptions:
+    subscription:
+      destroy_confirm: 'Вы уверены, что хотите отписаться от этого события'
