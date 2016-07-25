@@ -3,7 +3,7 @@
     <div class="alert alert-danger">
 
       <div class="lead buffer-bottom">
-        В вашей форме <%= errors.count %> ошибок
+        В вашей форме <%= errors.count.to_s+" "+Russian.p(errors.count, "ошибка","ошибки","ошибок") %>
       </div>
 
       <ul>
