@@ -20,6 +20,7 @@ class Subscription < ActiveRecord::Base
     end
   end
 
+
   def user_email
     if user.present?
       user.email
