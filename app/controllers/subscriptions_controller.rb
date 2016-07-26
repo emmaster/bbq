@@ -9,7 +9,9 @@ class SubscriptionsController < ApplicationController
     @new_subscription = @event.subscriptions.build(subscription_params)
     @new_subscription.user = current_user
 
-    redirect_to @event, alert: I18n.t('controllers.subscription.host_cant_subscribe') and return nil if @event.user.email == @new_subscription.user.email
+    if @new_subscription.user.present? && @event.user.email == @new_subscription.user.email
+      redirect_to @event, alert: I18n.t('controllers.subscription.host_cant_subscribe') and return nil
+    end
 
     if @new_subscription.save
       redirect_to @event, notice: I18n.t('controllers.subscription.created')

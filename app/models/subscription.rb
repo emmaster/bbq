@@ -12,6 +12,19 @@ class Subscription < ActiveRecord::Base
   validates :user, uniqueness: {scope: :event_id}, if: 'user.present?'
   validates :user, uniqueness: {scope: :user_email}, unless: 'user.present?'
 
+  before_validation :check_users_emails
+
+
+  def check_users_emails
+    unless user.present?
+      u = User.find_by(email: user_email)
+      if u.present?
+        errors.add(:email, "эта почта принадлежит одному из зарегистрированных пользователей")
+        return false
+      end
+    end
+  end
+
   def user_name
     if user.present?
       user.name
@@ -19,7 +32,6 @@ class Subscription < ActiveRecord::Base
       super
     end
   end
-
 
   def user_email
     if user.present?
