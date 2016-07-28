@@ -10,6 +10,9 @@ gem 'devise', '3.5.10'
 gem 'devise-i18n'
 gem 'russian'
 
+gem 'carrierwave'
+gem 'rmagick'
+
 gem 'jquery-rails'
 
 gem 'turbolinks'

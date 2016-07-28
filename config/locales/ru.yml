@@ -3,10 +3,12 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      photo: 'Фотография'
     attributes:
       user:
         email: 'Email'
         name: 'Имя'
+        avatar: 'Аватар'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
       event:
@@ -14,6 +16,11 @@ ru:
         address: 'Адрес проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+        photo: 'Фотографии'
+      comment:
+        body: 'Комментарий'
+      photo:
+        photo: 'Фотография'
   controllers:
     events:
       created: 'Событие было успешно созданно'
@@ -30,6 +37,10 @@ ru:
       created: 'Вы подписались на событие'
       error: 'Ошибка — действие не произведено'
       host_cant_subscribe: 'Ошибка — нельзя подписываться на свои события'
+    photos:
+      error: 'Что-то не так с фоткой'
+      created: 'Вы добавили фотку'
+      destroyed: 'Вы добавили фотку'
   app:
     name: 'Шашлыки'
     company: 'Хороший п'

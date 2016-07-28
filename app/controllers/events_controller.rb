@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!, except: [:show, :index]
+  before_action :authenticate_user!, except: [:show, :index, :test]
   before_action :set_event, only: [:show]
   before_action :set_current_user_event, only: [:edit, :update, :destroy]
 
@@ -12,6 +12,7 @@ class EventsController < ApplicationController
   def show
     @new_comment = @event.comments.build(params[:comment])
     @new_subscription = @event.subscriptions.build(params[:subscription])
+    @new_photo = @event.photos.build(params[:photo])
   end
 
   # GET /events/new
@@ -21,7 +22,10 @@ class EventsController < ApplicationController
 
   # GET /events/1/edit
   def edit
+  end
 
+  def test
+    render partial: 'events/test'
   end
 
   # POST /events
