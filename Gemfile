@@ -12,10 +12,12 @@ gem 'russian'
 
 gem 'carrierwave'
 gem 'rmagick'
+gem 'fog-aws'
 
 gem 'jquery-rails'
 
 gem 'turbolinks'
+
 
 
 group :production do
