@@ -1,0 +1,11 @@
+<h1><%= t '.title' %></h1>
+
+
+<p><%= image_tag(@photo.photo.url) %></p>
+
+<p><%= t '.author' %>: <%= @photo.user.name %></p>
+
+
+<p><%= t '.event' %>: <%= @event.title %></p>
+<p><%= t '.datetime' %>: <%= l @event.datetime%></p>
+<p><%= t '.owner' %>: <%= @event.user.name%></p>
