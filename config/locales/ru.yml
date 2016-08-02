@@ -19,6 +19,7 @@ ru:
         datetime: 'Дата и время'
         description: 'Описание'
         photo: 'Фотографии'
+        pincode: 'Пинкод'
       comment:
         body: 'Комментарий'
       photo:
